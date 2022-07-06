@@ -1,8 +1,11 @@
-import React from "react";
-import "./App.css";
+import './App.css'
+// eslint-disable-next-line import/extensions
+import FirstButton from './components/First-Button/FirstButton'
 
-function App() {
-  return <div className="App"></div>;
-}
+const App = () => (
+  <div className="App">
+    <FirstButton text="Click me" />
+  </div>
+)
 
-export default App;
+export default App
