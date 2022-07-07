@@ -5,7 +5,7 @@ type IconProps = {
   size: number
 }
 
-const Iconca: FC<IconProps> = ({ nameImg, size }) => (
+const Icon: FC<IconProps> = ({ nameImg, size }) => (
   <div>
     <img
       src={nameImg}
@@ -15,4 +15,4 @@ const Iconca: FC<IconProps> = ({ nameImg, size }) => (
   </div>
 )
 
-export default Iconca
+export default Icon
