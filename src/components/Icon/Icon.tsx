@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 export type IconProps = {
-  nameImg: string
+  nameImg: 'octopus' | 'dove' | 'crab' | 'whale' | 'question'
   size: number
 }
 
