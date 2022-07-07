@@ -1,13 +1,26 @@
 import './App.css'
 
 import FirstButton from './components/First-Button/FirstButton'
-import Icon from './components/Icon/Icon'
+import Icon, { IconProps } from './components/Icon/Icon'
 import MultiButton from './components/MultiButton/MultiButton'
 
 import crab from './assets/crab.svg'
 import octopus from './assets/octopus.svg'
 import whale from './assets/whale.svg'
+import dove from './assets/dove.svg'
+
 import IconButton from './components/IconButton/IconButton'
+import CaptionIcon from './components/CaptionIcon/CaptionIcon'
+
+const captionIconOctopus: IconProps = {
+  nameImg: octopus,
+  size: 26,
+}
+
+const captionIconDove: IconProps = {
+  nameImg: dove,
+  size: 48,
+}
 
 const App = () => (
   <div className="App">
@@ -31,6 +44,12 @@ const App = () => (
     </div>
     <IconButton text="Кнопка-кит" size={40} nameImg={whale} />
     <IconButton text="Крабо-кнопка" size={60} nameImg={crab} />
+    <CaptionIcon text="Hello" fontSize={24}>
+      <Icon {...captionIconOctopus} />
+    </CaptionIcon>
+    <CaptionIcon text="The dove of peace" fontSize={32}>
+      <Icon {...captionIconDove} />
+    </CaptionIcon>
   </div>
 )
 
