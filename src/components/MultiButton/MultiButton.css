@@ -83,11 +83,11 @@
 }
 
 .MultiButton_state_successfull {
-  background-color: #a2dbb0;
+  background-color: #b1cbe0;
 }
 
 .MultiButton_state_successfull:not([disabled]):hover {
-  background-color: #6c6;
+  background-color: #d8e5f0;
 }
 
 .MultiButton_state_dangerous {
