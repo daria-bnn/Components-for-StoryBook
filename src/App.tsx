@@ -25,11 +25,14 @@ const captionIconDove: IconProps = {
 
 const staticBtn: BtnProps = {
   size: 'xs',
+  action: 'static',
+  state: 'normal',
 }
 
 const smallLoadBtn: BtnProps = {
   size: 's',
   action: 'loading',
+  state: 'normal',
 }
 
 const mediumValidSuccBtn: BtnProps = {
@@ -40,22 +43,24 @@ const mediumValidSuccBtn: BtnProps = {
 
 const mediumDanggBtn: BtnProps = {
   size: 'm',
+  action: 'static',
   state: 'dangerous',
 }
 
 const largeLoadDisablBtn: BtnProps = {
   size: 'l',
   action: 'disabled',
+  state: 'normal',
 }
 
 const App = () => (
   <div className="App">
     <FirstButton text="Click me" />
-    <MultiButton modif={staticBtn} />
-    <MultiButton modif={smallLoadBtn} />
-    <MultiButton modif={mediumValidSuccBtn} />
-    <MultiButton modif={mediumDanggBtn} />
-    <MultiButton modif={largeLoadDisablBtn} />
+    <MultiButton {...staticBtn} />
+    <MultiButton {...smallLoadBtn} />
+    <MultiButton {...mediumValidSuccBtn} />
+    <MultiButton {...mediumDanggBtn} />
+    <MultiButton {...largeLoadDisablBtn} />
     <div style={{ border: '1px solid #86c4d9', padding: '10px 20px' }}>
       <h2>Айконки</h2>
       <Icon nameImg={crab} size={40} />

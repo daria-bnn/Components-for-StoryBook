@@ -7,7 +7,7 @@ import arrow from './assets/arrow.svg'
 
 const cnFirstButton = cn('FirstButton')
 
-type FirstButtonProps = {
+export type FirstButtonProps = {
   text: string
 }
 

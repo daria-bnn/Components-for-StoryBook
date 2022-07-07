@@ -7,19 +7,16 @@ const cnMultiButton = cn('MultiButton')
 
 export type BtnProps = {
   size: 'xs' | 's' | 'm' | 'l'
-  action?: 'loading' | 'disabled' | 'valid'
-  state?: 'dangerous' | 'successfull'
+  action: 'loading' | 'disabled' | 'valid' | 'static'
+  state: 'dangerous' | 'successfull' | 'normal'
 }
 
-type MultiButtonProps = {
-  modif: BtnProps
-}
-
-const MultiButton: FC<MultiButtonProps> = ({ modif }) => (
+const MultiButton: FC<BtnProps> = ({ size, action, state }) => (
   <button
     type="button"
-    disabled={modif.action === 'disabled'}
-    className={modif ? cnMultiButton(modif) : cnMultiButton()}
+    disabled={action === 'disabled'}
+    // eslint-disable-next-line object-shorthand
+    className={cnMultiButton({ size: size, action: action, state: state })}
   >
     Click
   </button>

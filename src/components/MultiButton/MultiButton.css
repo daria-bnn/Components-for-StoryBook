@@ -11,8 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100px;
-  background-color: transparent;
   color: #007ba7;
   border-radius: 10px;
   border: 2px solid currentColor;
@@ -27,14 +25,15 @@
 }
 
 .MultiButton_size_s {
+  min-width: 170px;
   font-size: 18px;
-  padding: 8px 40px;
+  padding: 10px 40px;
 }
 
 .MultiButton_size_xs {
-  min-width: 80px;
+  min-width: 141px;
   font-size: 14px;
-  padding: 6px 32px;
+  padding: 8px 32px;
 }
 
 .MultiButton_size_m {
@@ -47,6 +46,14 @@
   min-width: 240px;
   font-size: 24px;
   padding: 24px 80px;
+}
+
+.MultiButton_action_static {
+}
+
+.MultiButton_size_xs.MultiButton_action_loading::before {
+  height: 8px;
+  width: 8px;
 }
 
 .MultiButton_action_loading::before {
@@ -80,6 +87,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.MultiButton_state_normal {
+  background-color: transparent;
 }
 
 .MultiButton_state_successfull {
