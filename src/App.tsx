@@ -11,6 +11,7 @@ import dove from './assets/dove.svg'
 
 import IconButton from './components/IconButton/IconButton'
 import CaptionIcon from './components/CaptionIcon/CaptionIcon'
+import BlockHint from './components/BlockHint/BlockHint'
 
 const captionIconOctopus: IconProps = {
   nameImg: octopus,
@@ -66,9 +67,14 @@ const App = () => (
     <CaptionIcon text="Hello" fontSize={24}>
       <Icon {...captionIconOctopus} />
     </CaptionIcon>
-    <CaptionIcon text="The dove of peace" fontSize={32}>
-      <Icon {...captionIconDove} />
-    </CaptionIcon>
+    <BlockHint textHint="Эта кнопка умеет клац-клац">
+      <IconButton text="Крабо-кнопка" size={60} nameImg={crab} />
+    </BlockHint>
+    <BlockHint textHint="Мирный блок">
+      <CaptionIcon text="The dove of peace" fontSize={32}>
+        <Icon {...captionIconDove} />
+      </CaptionIcon>
+    </BlockHint>
   </div>
 )
 
