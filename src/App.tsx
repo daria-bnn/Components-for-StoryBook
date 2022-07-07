@@ -2,7 +2,7 @@ import './App.css'
 
 import FirstButton from './components/First-Button/FirstButton'
 import Icon, { IconProps } from './components/Icon/Icon'
-import MultiButton from './components/MultiButton/MultiButton'
+import MultiButton, { BtnProps } from './components/MultiButton/MultiButton'
 
 import crab from './assets/crab.svg'
 import octopus from './assets/octopus.svg'
@@ -22,20 +22,39 @@ const captionIconDove: IconProps = {
   size: 48,
 }
 
+const staticBtn: BtnProps = {
+  size: 'xs',
+}
+
+const smallLoadBtn: BtnProps = {
+  size: 's',
+  action: 'loading',
+}
+
+const mediumValidSuccBtn: BtnProps = {
+  size: 'm',
+  action: 'valid',
+  state: 'successfull',
+}
+
+const mediumDanggBtn: BtnProps = {
+  size: 'm',
+  state: 'dangerous',
+}
+
+const largeLoadDisablBtn: BtnProps = {
+  size: 'l',
+  action: 'disabled',
+}
+
 const App = () => (
   <div className="App">
     <FirstButton text="Click me" />
-    <MultiButton modif={{ size: 'xs', action: 'loading' }} />
-    <MultiButton
-      modif={{ size: 'xs', action: 'loading', state: 'successfull' }}
-    />
-    <MultiButton modif={{ size: 's', action: 'valid' }} />
-    <MultiButton modif={{ size: 's', action: 'valid', state: 'successfull' }} />
-    <MultiButton
-      modif={{ size: 'm', action: 'disabled', state: 'successfull' }}
-    />
-    <MultiButton modif={{ size: 'm', action: 'disabled' }} />
-    <MultiButton modif={{ size: 's', state: 'dangerous' }} />
+    <MultiButton modif={staticBtn} />
+    <MultiButton modif={smallLoadBtn} />
+    <MultiButton modif={mediumValidSuccBtn} />
+    <MultiButton modif={mediumDanggBtn} />
+    <MultiButton modif={largeLoadDisablBtn} />
     <div style={{ border: '1px solid #86c4d9', padding: '10px 20px' }}>
       <h2>Айконки</h2>
       <Icon nameImg={crab} size={40} />

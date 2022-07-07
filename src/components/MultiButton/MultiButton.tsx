@@ -5,14 +5,14 @@ import './MultiButton.css'
 
 const cnMultiButton = cn('MultiButton')
 
-type props = {
+export type BtnProps = {
   size: 'xs' | 's' | 'm' | 'l'
   action?: 'loading' | 'disabled' | 'valid'
   state?: 'dangerous' | 'successfull'
 }
 
 type MultiButtonProps = {
-  modif: props
+  modif: BtnProps
 }
 
 const MultiButton: FC<MultiButtonProps> = ({ modif }) => (

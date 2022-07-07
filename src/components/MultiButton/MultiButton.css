@@ -8,8 +8,9 @@
 }
 
 .MultiButton {
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 100px;
   background-color: transparent;
   color: #007ba7;
@@ -37,13 +38,13 @@
 }
 
 .MultiButton_size_m {
-  min-width: 120px;
+  min-width: 200px;
   font-size: 20px;
   padding: 16px 60px;
 }
 
 .MultiButton_size_l {
-  min-width: 136px;
+  min-width: 240px;
   font-size: 24px;
   padding: 24px 80px;
 }
