@@ -1,14 +1,18 @@
 import React, { FC } from 'react'
 
+import getSrcImages from './utilss/getSrcImage'
+
+type NameImg = 'crab' | 'octopus' | 'whale' | 'dove' | 'question'
+
 export type IconProps = {
-  nameImg: 'octopus' | 'dove' | 'crab' | 'whale' | 'question'
+  nameImg: NameImg
   size: number
 }
 
 const Icon: FC<IconProps> = ({ nameImg, size }) => (
   <div>
     <img
-      src={nameImg}
+      src={getSrcImages(nameImg)}
       alt={nameImg}
       style={{ width: `${size}px`, height: `${size}px` }}
     />

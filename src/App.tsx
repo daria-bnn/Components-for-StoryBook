@@ -4,22 +4,17 @@ import FirstButton from './components/First-Button/FirstButton'
 import Icon, { IconProps } from './components/Icon/Icon'
 import MultiButton, { BtnProps } from './components/MultiButton/MultiButton'
 
-import crab from './assets/crab.svg'
-import octopus from './assets/octopus.svg'
-import whale from './assets/whale.svg'
-import dove from './assets/dove.svg'
-
 import IconButton from './components/IconButton/IconButton'
 import CaptionIcon from './components/CaptionIcon/CaptionIcon'
 import BlockHint from './components/BlockHint/BlockHint'
 
 const captionIconOctopus: IconProps = {
-  nameImg: octopus,
+  nameImg: "octopus",
   size: 26,
 }
 
 const captionIconDove: IconProps = {
-  nameImg: dove,
+  nameImg: "dove",
   size: 48,
 }
 
@@ -63,17 +58,17 @@ const App = () => (
     <MultiButton {...largeLoadDisablBtn} />
     <div style={{ border: '1px solid #86c4d9', padding: '10px 20px' }}>
       <h2>Айконки</h2>
-      <Icon nameImg={crab} size={40} />
-      <Icon nameImg={octopus} size={60} />
-      <Icon nameImg={whale} size={80} />
+      <Icon nameImg="crab" size={40} />
+      <Icon nameImg="octopus" size={60} />
+      <Icon nameImg="whale" size={80} />
     </div>
-    <IconButton text="Кнопка-кит" size={40} nameImg={whale} />
-    <IconButton text="Крабо-кнопка" size={60} nameImg={crab} />
+    <IconButton text="Кнопка-кит" size={40} nameImg="whale" />
+    <IconButton text="Крабо-кнопка" size={60} nameImg="crab" />
     <CaptionIcon text="Hello" fontSize={24}>
       <Icon {...captionIconOctopus} />
     </CaptionIcon>
     <BlockHint textHint="Эта кнопка умеет клац-клац">
-      <IconButton text="Крабо-кнопка" size={60} nameImg={crab} />
+      <IconButton text="Крабо-кнопка" size={60} nameImg="crab" />
     </BlockHint>
     <BlockHint textHint="Мирный блок">
       <CaptionIcon text="The dove of peace" fontSize={32}>
