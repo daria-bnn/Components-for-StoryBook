@@ -4,7 +4,7 @@ import whale from '../assets/whale.svg'
 import dove from '../assets/dove.svg'
 import question from '../assets/question.svg'
 
-const getSrcImages = (nameImg: string | undefined): string | undefined => {
+const getSrcImages = (nameImg: string): string => {
   switch (nameImg) {
     case 'crab':
       return crab
@@ -26,7 +26,7 @@ const getSrcImages = (nameImg: string | undefined): string | undefined => {
     }
 
     default:
-      return undefined
+      return 'question'
   }
 }
 
