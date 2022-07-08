@@ -49,8 +49,16 @@ cd <название папки>
 npm i
 ```
 
+- Запуск проекта:
+
 ```Bash
 npm start
+```
+
+- Запуск StoryBook, выполните команду:
+
+```sh
+npm run storybook
 ```
 
 Разработчик [Дарья](https://github.com/daria-bnn?tab=repositories)
