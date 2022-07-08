@@ -14,7 +14,7 @@ const Icon: FC<IconProps> = ({ nameImg, size }) => (
     <img
       src={getSrcImages(nameImg)}
       alt={nameImg}
-      style={{ width: `${size}px`, height: `${size}px` }}
+      style={{ width: `${size}px` }}
     />
   </div>
 )
