@@ -1,0 +1,111 @@
+@keyframes rotate-forever {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.MultiButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007ba7;
+  border-radius: 10px;
+  border: 2px solid currentColor;
+  transition: all 0.3s ease;
+}
+
+.MultiButton:not([disabled]):hover {
+  cursor: pointer;
+  color: #009ad1;
+  border: 2px solid currentColor;
+  background-color: rgb(173, 201, 222, 0.1);
+}
+
+.MultiButton_size_s {
+  min-width: 170px;
+  font-size: 18px;
+  padding: 10px 40px;
+}
+
+.MultiButton_size_xs {
+  min-width: 141px;
+  font-size: 14px;
+  padding: 8px 32px;
+}
+
+.MultiButton_size_m {
+  min-width: 200px;
+  font-size: 20px;
+  padding: 16px 60px;
+}
+
+.MultiButton_size_l {
+  min-width: 240px;
+  font-size: 24px;
+  padding: 24px 80px;
+}
+
+.MultiButton_action_static {
+}
+
+.MultiButton_size_xs.MultiButton_action_loading::before {
+  height: 8px;
+  width: 8px;
+}
+
+.MultiButton_action_loading::before {
+  content: '';
+  margin-right: 6px;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-name: rotate-forever;
+  animation-timing-function: linear;
+  height: 16px;
+  width: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.MultiButton_action_disabled {
+  color: #555f6a;
+}
+
+.MultiButton_action_valid {
+}
+
+.MultiButton_action_valid::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url(./assets/valid.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.MultiButton_state_normal {
+  background-color: transparent;
+}
+
+.MultiButton_state_successfull {
+  background-color: #b1cbe0;
+}
+
+.MultiButton_state_successfull:not([disabled]):hover {
+  background-color: #d8e5f0;
+}
+
+.MultiButton_state_dangerous {
+  color: #f44336;
+}
+
+.MultiButton_state_dangerous:not([disabled]):hover {
+  color: #f44336;
+  background-color: rgb(253, 94, 83, 0.1);
+}

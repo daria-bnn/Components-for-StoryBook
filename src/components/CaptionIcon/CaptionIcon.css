@@ -1,0 +1,15 @@
+.CaptionIcon {
+  padding: 6px 12px;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 0.5px solid #1d2334;
+}
+
+.CaptionIcon-Text {
+  line-height: 1.2;
+  color: #1d2334;
+}

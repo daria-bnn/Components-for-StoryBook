@@ -1,8 +1,5 @@
-.App {
-  text-align: center;
+.Icon {
   display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
   align-items: center;
   justify-content: center;
 }
