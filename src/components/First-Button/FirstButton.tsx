@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { cn } from '@bem-react/classname'
 
-import './FirstButton.css'
-
 import arrow from './assets/arrow.svg'
+
+import './FirstButton.css'
 
 const cnFirstButton = cn('FirstButton')
 

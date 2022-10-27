@@ -1,5 +1,3 @@
-import './App.css'
-
 import FirstButton from './components/First-Button/FirstButton'
 import Icon, { IconProps } from './components/Icon/Icon'
 import MultiButton, { BtnProps } from './components/MultiButton/MultiButton'
@@ -8,13 +6,15 @@ import IconButton from './components/IconButton/IconButton'
 import CaptionIcon from './components/CaptionIcon/CaptionIcon'
 import BlockHint from './components/BlockHint/BlockHint'
 
+import './App.css'
+
 const captionIconOctopus: IconProps = {
-  nameImg: "octopus",
+  nameImg: 'octopus',
   size: 26,
 }
 
 const captionIconDove: IconProps = {
-  nameImg: "dove",
+  nameImg: 'dove',
   size: 48,
 }
 

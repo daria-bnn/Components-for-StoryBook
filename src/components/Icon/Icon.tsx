@@ -1,10 +1,9 @@
 import React, { FC } from 'react'
-
-import './Icon.css'
-
 import { cn } from '@bem-react/classname'
 
 import getSrcImages from './utilss/getSrcImage'
+
+import './Icon.css'
 
 const cnIcon = cn('Icon')
 
